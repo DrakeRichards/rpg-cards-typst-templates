@@ -1,5 +1,6 @@
 // Data imports
 #let data = yaml("in/character.yaml")
+#let portrait = image("in/character.jpg", width: 75%)
 
 // Global settings
 #set page(width: 4in, height: 6in, margin: 15pt, fill: white)
@@ -52,7 +53,7 @@
           #if data.groupTitle == "" {
             [n/a]
           } else { [#data.groupTitle] }
-           
+
         ])
       ],
     )
@@ -66,8 +67,6 @@
 #let description = [
   #data.description.overview
 ]
-
-#let portrait = image("in/character.png", width: 75%)
 
 // Alternate header with an image background.
 // Not implemented until the Stroke function is released.
