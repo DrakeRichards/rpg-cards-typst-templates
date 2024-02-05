@@ -1,0 +1,63 @@
+{
+    "$id": "https://raw.githubusercontent.com/DrakeRichards/rpg-cards-typst-templates/main/character.schema.json",
+    "title": "Typst RPG Character Card Schema",
+    "description": "A schema to valdidate character.json files to be exported to the RPG character card Typst template.",
+    "type": "object",
+    "required": [
+        "name",
+        "nameSubtext",
+        "bodyText",
+        "image"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the character."
+        },
+        "nameSubtext": {
+            "type": "string",
+            "description": "The text that will appear beneath their name. Example: Gender/Race/Class from D&D 5e."
+        },
+        "bodyText": {
+            "type": "string",
+            "description": "The body text that will fill the bulk of the card. This is where you can put the character's backstory, personality, and other details."
+        },
+        "image": {
+            "type": "string",
+            "description": "The URL of the image to be used as the character's portrait. Can be a local file path or a web URL.",
+            "default": "in/character.jpg"
+        },
+        "imageSubtext": {
+            "type": "string",
+            "description": "The subtext that will appear beneath the character's portrait. This is where you can put the character's name, title, or other details."
+        },
+        "listTitle": {
+            "type": "string",
+            "description": "The title of the bulleted list that will appear on the card. This is where you can put the character's stats, abilities, or other details."
+        },
+        "listItems": {
+            "type": "array",
+            "description": "The list of items that will appear on the card. This is where you can put the character's stats, abilities, or other details.",
+            "items": {
+                "type": "object",
+                "required": [
+                    "name",
+                    "value"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the item."
+                    },
+                    "value": {
+                        "type": [
+                            "string",
+                            "integer"
+                        ],
+                        "description": "The value of the item."
+                    }
+                }
+            }
+        }
+    }
+}
