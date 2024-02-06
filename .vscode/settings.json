@@ -10,5 +10,6 @@
   ],
   "yaml.schemas": {
     "schemas/character.schema.json": "*character*.yaml"
-  }
+  },
+  "files.eol": "\n"
 }
