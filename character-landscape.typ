@@ -62,14 +62,28 @@
     "in/" + data.image
   }
 }
-#let characterImage = image(imagePath)
+#let characterImage = image(imagePath, height: auto, fit: "contain")
 #let portrait = {
   set align(center)
   show figure.caption: it => {
     set text(style: "italic")
     it.body
   }
-  figure(characterImage, caption: data.imageSubtext)
+  figure(characterImage)
+}
+
+// Image subtext
+// I use this instead of a caption because I want it to line up on both columns.
+#let imageSubtext = {
+  set align(center + bottom)
+  set text(style: "italic")
+  data.imageSubtext
+}
+
+// Footer
+#let footer = {
+  set align(center + bottom)
+  data.footerText
 }
 
 // Build the document.
@@ -81,6 +95,8 @@
   #line(length: 100%)
   #listTitle
   #listItems
+  #footer
 ], [
   #portrait
+  #imageSubtext
 ])

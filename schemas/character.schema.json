@@ -58,6 +58,10 @@
                     }
                 }
             }
+        },
+        "footerText": {
+            "type": "string",
+            "description": "The footer text that will appear at the bottom of the card. This is where you can put the character's catchphrase, motto, or other details."
         }
     }
 }
