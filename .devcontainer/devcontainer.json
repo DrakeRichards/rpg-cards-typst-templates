@@ -14,7 +14,11 @@
         "nvarner.typst-lsp",
         "mgt19937.typst-preview",
         "CalebFiggers.typst-companion",
-        "tomoki1207.pdf"
+        "tomoki1207.pdf",
+        "ZainChen.json",
+        "mohsen1.prettify-json",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode"
       ]
     }
   },

@@ -2,14 +2,14 @@
   "typst-lsp.experimentalFormatterMode": "on",
   "json.schemas": [
     {
-      "fileMatch": [
-        "*.schema.json"
-      ],
+      "fileMatch": ["${workspaceFolder}/schemas/*.schema.json"],
       "url": "https://json-schema.org/draft-07/schema"
     }
   ],
   "yaml.schemas": {
-    "schemas/character.schema.json": "*character*.yaml"
+    "schemas/character.schema.json": "${workspaceFolder}/in/character.yaml"
   },
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "typst-lsp.rootPath": "./",
+  "typst-lsp.exportPdf": "never"
 }
