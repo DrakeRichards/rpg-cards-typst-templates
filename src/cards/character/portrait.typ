@@ -1,6 +1,6 @@
 // Imports
 #import "/src/blocks/character.typ" as blocks
-#import "/src/cards/character/formatting.typ": template
+#import "/src/templates/character.typ": template
 
 // Include global formatting rules.
 #show: template
