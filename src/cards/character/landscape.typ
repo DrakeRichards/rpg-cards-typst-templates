@@ -10,15 +10,10 @@
 
 // Build the document.
 #blocks.name
-#grid(columns: (auto, 50%), rows: (85%), column-gutter: 3mm, [
-  #blocks.subText
-  #line(length: 100%)
-  #blocks.bodyText
-  #line(length: 100%)
-  #blocks.listTitle
-  #blocks.listItems
-  #blocks.footer
-], [
-  #blocks.portrait
-  #blocks.imageSubtext
-])
+#grid(columns: (auto, 50%), column-gutter: 3mm, {
+  blocks.subText
+  blocks.bodyText
+  blocks.lists
+}, {
+  blocks.portrait
+})

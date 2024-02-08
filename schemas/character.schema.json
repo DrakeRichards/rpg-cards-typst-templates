@@ -2,6 +2,45 @@
     "$id": "https://raw.githubusercontent.com/DrakeRichards/rpg-cards-typst-templates/main/character.schema.json",
     "title": "Typst RPG Character Card Schema",
     "description": "A schema to valdidate character.json files to be exported to the RPG character card Typst template.",
+    "definitions": {
+        "listProperties": {
+            "type": "object",
+            "required": [
+                "title",
+                "items"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "The title of the bulleted list. Can be left blank."
+                },
+                "items": {
+                    "type": "array",
+                    "description": "The list of items that will appear on the card. This is where you can put the character's stats, abilities, or other details.",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the item. Can be blank if you don't want the item labelled."
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer"
+                                ],
+                                "description": "The value of the item."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
     "type": "object",
     "required": [
         "name",
@@ -15,7 +54,7 @@
         },
         "nameSubtext": {
             "type": "string",
-            "description": "The text that will appear beneath their name. Example: Gender/Race/Class from D&D 5e."
+            "description": "The text that will appear beneath their name. Example: Gender/Race/Class from D&D 5e, or perhaps their title or role."
         },
         "bodyText": {
             "type": "string",
@@ -30,37 +69,12 @@
             "type": "string",
             "description": "The subtext that will appear beneath the character's portrait. This is where you can put the character's name, title, or other details."
         },
-        "listTitle": {
-            "type": "string",
-            "description": "The title of the bulleted list that will appear on the card. This is where you can put the character's stats, abilities, or other details."
-        },
-        "listItems": {
+        "lists": {
             "type": "array",
-            "description": "The list of items that will appear on the card. This is where you can put the character's stats, abilities, or other details.",
+            "description": "An array of lists.",
             "items": {
-                "type": "object",
-                "required": [
-                    "name",
-                    "value"
-                ],
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the item."
-                    },
-                    "value": {
-                        "type": [
-                            "string",
-                            "integer"
-                        ],
-                        "description": "The value of the item."
-                    }
-                }
+                "$ref": "#/definitions/listProperties"
             }
-        },
-        "footerText": {
-            "type": "string",
-            "description": "The footer text that will appear at the bottom of the card. This is where you can put the character's catchphrase, motto, or other details."
         }
     }
 }

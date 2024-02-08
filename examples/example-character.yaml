@@ -1,15 +1,20 @@
 name: Nelra Treewhisper
-nameSubtext: Female Wood Elf Druid
+nameSubtext: Vermin Protector
 bodyText: Nelra Treewhisper is deeply connected to the urban creatures of Waterdeep. Known as a protector of city pests and vermin, Nelra acts as a bridge between their world and the world of Waterdeep's denizens, standing up for their rights, and providing valuable information from the city streets.
 image: character.jpg
-imageSubtext: With leaf-green eyes that mirror the verdancy of nature, Nelra is a slender elf with waist-length chestnut hair, usually adorned with small creatures. Her attire usually includes worn-out leather boots, a cloak decorated with feathers and bones, and a well-worn hat.
-listTitle: ""
-listItems:
-  - name: Location
-    value: Waterdeep
-  - name: Group Name
-    value: The Possums
-  - name: Group Rank
-    value: 3
-  - name: Group Title
-    value: ""
+imageSubtext: Female Wood Elf
+lists:
+  - title: ""
+    items:
+      - name: Quirk
+        value: She habitually takes in strays and tends to whisper when conversing.
+      - name: Likes
+        value: Cross-species communication, liberty of urban wildlife, shadowy corners.
+      - name: Dislikes
+        value: People who dismiss the importance of small creatures, cages, excessive noise.
+  - title: ""
+    items:
+      - name: Member of
+        value: The Possums
+      - name: Location
+        value: Waterdeep

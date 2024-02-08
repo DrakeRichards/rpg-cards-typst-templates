@@ -15,14 +15,15 @@
     #box(width: 100%, inset: 5pt, fill: color.maroon, it)
   ]
 
-  // Level 2 headings are centered with a line beneath.
+  // Level 2 headings are centered
   show heading.where(level: 2): it => [
     #set align(center)
     #set text(size: 1.2em)
     #it
-    // Move the line up a bit.
-    #pad(top: -8pt, line(length: 100%))
   ]
+
+  // Lists
+  set list(marker: [])
 
   body
 }

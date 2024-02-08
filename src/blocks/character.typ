@@ -1,12 +1,14 @@
 // Imports
 #import "/src/common/tests.typ"
+#import "/src/blocks/listWithKeys.typ": listWithKeys
 #let data = yaml("/in/character.yaml")
 
 // Name
-#let name = [= #data.name]
+#let name = heading(level: 1, data.name)
 
 // Body Text
 #let bodyText = par(justify: true)[
+  #line(length: 100%)
   #data.bodyText
 ]
 
@@ -19,51 +21,40 @@
   }
 }
 
+// Function to return a portrait of a given width
 #let sizedPortrait(width: 100%) = {
   set align(center)
-  show figure.caption: it => {
-    set text(style: "italic")
-    it.body
-  }
   figure(image(imagePath, width: width, fit: "contain"))
 }
 
+// Basic portrait block
 #let portrait = {
   set align(center)
   show figure.caption: it => {
     set text(style: "italic")
     it.body
   }
-  figure(image(imagePath, width: 100%, fit: "contain"))
+  figure(
+    caption: if data.keys().contains("imageSubtext") { data.imageSubtext },
+    image(imagePath, width: 100%, fit: "contain"),
+  )
 }
 
-// Title
+// Text under the name
 #let subText = if data.keys().contains("nameSubtext") {
   set text(style: "italic")
   data.nameSubtext
 }
 
-// Bulleted List
-// Title
-#let listTitle = if data.keys().contains("listTitle") {
-  [== #data.listTitle]
-}
-
-// Items
-#let listItems = if data.keys().contains("listItems") {
-  if type(data.listItems) == "array" {
-    for item in data.listItems {
-      [- *#item.name:* #item.value]
-    }
+// Bulleted Lists
+#let lists = if data.keys().contains("lists") {
+  if type(data.lists) != "array" {
+    return
   }
-}
-
-// Image subtext
-// I use this instead of a caption because I want it to line up on both columns.
-#let imageSubtext = if data.keys().contains("imageSubtext") {
-  set align(center + bottom)
-  set text(style: "italic")
-  data.imageSubtext
+  for list in data.lists {
+    line(length: 100%)
+    listWithKeys(title: list.title, headingLevel: 2, list.items)
+  }
 }
 
 // Footer
