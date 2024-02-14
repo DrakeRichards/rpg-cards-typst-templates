@@ -1,7 +1,7 @@
 # User-generated files
 in/*
 *.pdf
-!in/placeholder
+!in/.placeholder
 
 # System-generated files
 .DS_Store
