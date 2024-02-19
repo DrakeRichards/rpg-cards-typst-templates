@@ -25,5 +25,10 @@
   // Lists
   set list(marker: [])
 
+  // Linebreaks are a line
+  show linebreak: it => {
+    line(length: 100%)
+  }
+
   body
 }
