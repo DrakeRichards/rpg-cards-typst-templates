@@ -7,7 +7,7 @@
 #show: template
 
 // Page settings
-#set page(width: 4in, height: 6in, margin: 15pt, fill: white)
+#set page(width: 5in, height: 7in, margin: 15pt, fill: white)
 
 #let body = {
   blocks.bodyText
