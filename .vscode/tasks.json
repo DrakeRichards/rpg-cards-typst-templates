@@ -4,13 +4,13 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "watch",
+      "label": "watch character landscape",
       "type": "shell",
       "command": "typst",
       "args": [
         "watch",
         "${workspaceFolder}/src/cards/character/landscape.typ",
-        "${workspaceFolder}/character-landscape.pdf",
+        "${workspaceFolder}/out/character-landscape.pdf",
         "--root",
         "./"
       ],
@@ -18,6 +18,35 @@
       "group": {
         "kind": "build",
         "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false,
+        "revealProblems": "onProblem"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "watch character portrait",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "watch",
+        "${workspaceFolder}/src/cards/character/portrait.typ",
+        "${workspaceFolder}/out/character-portrait.pdf",
+        "--root",
+        "./"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
       },
       "presentation": {
         "echo": true,
