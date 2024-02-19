@@ -1,6 +1,7 @@
 // Imports
 #import "/src/blocks/character.typ" as blocks
 #import "/src/templates/character.typ": template
+#import "/src/common/resizeContent.typ": sizedContent
 
 // Include global formatting rules.
 #show: template
@@ -8,14 +9,13 @@
 // Page settings
 #set page(width: 4in, height: 6in, margin: 15pt, fill: white)
 
+#let body = {
+  blocks.bodyText
+  blocks.lists
+}
+
 // Build the document.
 #blocks.name
 #blocks.subText
-#blocks.sizedPortrait(width: 100%)
-#blocks.imageSubtext
-#line(length: 100%)
-#blocks.bodyText
-#line(length: 100%)
-#blocks.listTitle
-#blocks.listItems
-#blocks.footer
+#blocks.portrait(width: 70%)
+#block(width: 100%, height: 2in)[#sizedContent(body)]

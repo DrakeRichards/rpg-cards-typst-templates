@@ -1,6 +1,7 @@
 // Imports
 #import "/src/blocks/character.typ" as blocks
 #import "/src/templates/character.typ": template
+#import "/src/common/resizeContent.typ": sizedContent
 
 // Include global formatting rules
 #show: template
@@ -16,7 +17,7 @@
 }
 
 #let blocksRight = {
-  blocks.portrait
+  blocks.portrait()
 }
 
 // Build the document.
@@ -25,6 +26,6 @@
   columns: (auto, 50%),
   rows: (87%),
   column-gutter: 3mm,
-  blocksLeft,
+  sizedContent(blocksLeft),
   blocksRight,
 )
