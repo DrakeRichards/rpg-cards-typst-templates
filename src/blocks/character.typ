@@ -1,6 +1,6 @@
 // Imports
-#import "/src/common/validation.typ"
-#import "/src/blocks/listWithKeys.typ": listWithKeys
+#import "/src/modules/validation.typ"
+#import "/src/modules/listWithKeys.typ": listWithKeys
 #let data = yaml("/in/character.yaml")
 
 // Name

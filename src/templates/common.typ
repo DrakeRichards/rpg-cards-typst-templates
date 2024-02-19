@@ -1,7 +1,10 @@
 // Formatting settings for character cards.
-
-#let template(body) = {
+// PARAMETERS:
+// - `bannerColor`: The color of the banner at the top of the card.
+// - `content`: The content of the card.
+#let template(bannerColor: color.gray, content) = {
   // Text
+  // Sized for 4x6 index cards
   set text(size: 9pt)
 
   // Headings
@@ -9,10 +12,10 @@
     smallcaps(it)
   }
 
-  // Level 1 headings have a highlight.
+  // Level 1 headings have a gray highlight.
   show heading.where(level: 1): it => [
     #set text(size: 1.5em, fill: white)
-    #box(width: 100%, inset: 5pt, fill: color.maroon, it)
+    #box(width: 100%, inset: 5pt, fill: bannerColor, it)
   ]
 
   // Level 2 headings are centered
@@ -30,5 +33,5 @@
     line(length: 100%)
   }
 
-  body
+  content
 }
