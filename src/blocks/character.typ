@@ -52,11 +52,3 @@
     listWithKeys(title: list.title, headingLevel: 2, list.items)
   }
 }
-
-// Footer
-#let footer = if data.keys().contains("footerText") {
-  set align(center + bottom)
-  if data.keys().contains("footerText") {
-    data.footerText
-  }
-}
