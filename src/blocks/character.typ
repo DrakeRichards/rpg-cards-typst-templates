@@ -1,5 +1,5 @@
 // Imports
-#import "/src/common/tests.typ"
+#import "/src/common/validation.typ"
 #import "/src/blocks/listWithKeys.typ": listWithKeys
 #let data = yaml("/in/character.yaml")
 
@@ -14,7 +14,7 @@
 
 // Image
 #let imagePath = {
-  if tests.isUrl(data.image) {
+  if validation.isUrl(data.image) {
     data.image
   } else {
     "/in/" + data.image
