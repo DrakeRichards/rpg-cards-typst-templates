@@ -7,7 +7,7 @@
     }
   ],
   "yaml.schemas": {
-    "file:///workspaces/rpg-cards-typst-templates/schemas/character.schema.json": "file:///workspaces/rpg-cards-typst-templates/in/character.yaml"
+    "schemas/character.schema.json": "*/character.yaml",
   },
   "files.eol": "\n",
   "typst-lsp.rootPath": "./",
