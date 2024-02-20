@@ -19,13 +19,13 @@
   ]
 
   // Level 2 headings are centered
-  show heading.where(level: 2): it => [
-    #set align(center)
-    #set text(size: 1.2em)
-    #it
-  ]
+  show heading.where(level: 2): it => {
+    set align(center)
+    set text(size: 1.2em)
+    block(above: 0.5em, it)
+  }
 
-  // Lists
+  // Remove list markers
   set list(marker: [])
 
   // Linebreaks are a line
