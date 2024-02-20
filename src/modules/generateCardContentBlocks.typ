@@ -72,7 +72,7 @@
   }
 }
 
-#let getCardData(data) = (
+#let generateCardContentBlocks(data) = (
   name: _getNameContent(data),
   nameSubtext: _getNameSubtextContent(data),
   bodyText: _getBodyTextContent(data),
