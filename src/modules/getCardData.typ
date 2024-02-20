@@ -74,7 +74,7 @@
 
 #let getCardData(data) = (
   name: _getNameContent(data),
-  nameSubText: _getNameSubtextContent(data),
+  nameSubtext: _getNameSubtextContent(data),
   bodyText: _getBodyTextContent(data),
   portrait: _getPortraitContent(data),
   lists: _getListsContent(data),

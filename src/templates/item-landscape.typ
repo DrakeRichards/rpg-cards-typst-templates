@@ -12,7 +12,7 @@
   }
 
   let blocksRight = {
-    cardContent.nameSubText
+    cardContent.nameSubtext
     cardContent.bodyText
     cardContent.lists
   }

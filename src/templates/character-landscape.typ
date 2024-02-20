@@ -8,7 +8,7 @@
 
   // Blocks for each half of the card
   let blocksLeft = {
-    cardContent.nameSubText
+    cardContent.nameSubtext
     cardContent.bodyText
     cardContent.lists
   }
