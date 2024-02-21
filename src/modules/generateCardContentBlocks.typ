@@ -1,6 +1,6 @@
 // Imports
 #import "/src/modules/validation.typ"
-#import "/src/modules/listWithKeys.typ": listWithKeys
+#import "/src/modules/styledLists.typ": styledList
 
 #let _getNameContent(data) = {
   if "name" not in data.keys() {
@@ -68,7 +68,7 @@
   }
   for list in data.lists {
     linebreak()
-    listWithKeys(title: list.title, headingLevel: 2, list.items)
+    styledList(style: "plain", title: list.title, headingLevel: 2, list.items)
   }
 }
 
