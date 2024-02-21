@@ -14,7 +14,7 @@
     heading(level: headingLevel, title)
   }
   let listItems = items.map(item => (_listItem(item.name, item.value)))
-  return list(..listItems)
+  list(..listItems)
 }
 
 // Actually a table with two columns, where the first column is right-aligned and the second column is left-aligned

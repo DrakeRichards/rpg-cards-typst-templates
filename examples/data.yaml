@@ -7,6 +7,7 @@ cards:
     imageSubtext: Human Warrior
     lists:
       - title: Skills
+        style: aligned
         items:
           - name: Hand-to-Hand Combat
             value: "+2"

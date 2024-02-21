@@ -68,7 +68,12 @@
   }
   for list in data.lists {
     linebreak()
-    styledList(style: "plain", title: list.title, headingLevel: 2, list.items)
+    let listStyle = if "style" in list.keys() {
+      list.style
+    } else {
+      "plain"
+    }
+    styledList(style: listStyle, title: list.title, headingLevel: 2, list.items)
   }
 }
 

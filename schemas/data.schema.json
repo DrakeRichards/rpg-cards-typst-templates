@@ -14,6 +14,15 @@
                     "type": "string",
                     "description": "The title of the bulleted list. Can be left blank."
                 },
+                "style": {
+                    "type": "string",
+                    "description": "The style of the list. Defaults to 'plain'.",
+                    "enum": [
+                        "plain",
+                        "aligned"
+                    ],
+                    "default": "plain"
+                },
                 "items": {
                     "type": "array",
                     "description": "The list of items that will appear on the card. This is where you can put the character's stats, abilities, or other details.",
