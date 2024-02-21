@@ -1,0 +1,105 @@
+{
+    "$id": "https://raw.githubusercontent.com/DrakeRichards/rpg-cards-typst-templates/main/data.schema.json",
+    "title": "Typst RPG Card Data Schema",
+    "description": "A schema to valdidate data.yaml files to be exported to the Typst RPG card template.",
+    "definitions": {
+        "listProperties": {
+            "type": "object",
+            "required": [
+                "title",
+                "items"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "The title of the bulleted list. Can be left blank."
+                },
+                "items": {
+                    "type": "array",
+                    "description": "The list of items that will appear on the card. This is where you can put the character's stats, abilities, or other details.",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the item. Can be blank if you don't want the item labelled."
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer"
+                                ],
+                                "description": "The value of the item."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "cardData": {
+            "type": "object",
+            "required": [
+                "type",
+                "name",
+                "bodyText",
+                "image"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "The type of card. Can be 'character', 'item', or 'location'.",
+                    "enum": [
+                        "character",
+                        "item",
+                        "location"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the subject which will appear on the top banner."
+                },
+                "nameSubtext": {
+                    "type": "string",
+                    "description": "The text that will appear beneath the name. Example: Gender/Race/Class from D&D 5e, or perhaps their title or role."
+                },
+                "bodyText": {
+                    "type": "string",
+                    "description": "The body text that will fill the bulk of the card. This is where you can put the character's backstory, personality, and other details."
+                },
+                "image": {
+                    "type": "string",
+                    "description": "The URL or filename of the image to be used as the card's portrait. Can be a local file path or a web URL.",
+                    "default": "character.jpg"
+                },
+                "imageSubtext": {
+                    "type": "string",
+                    "description": "The subtext that will appear beneath the image. This is where you can put the character's name, title, or other details."
+                },
+                "lists": {
+                    "type": "array",
+                    "description": "An array of lists.",
+                    "items": {
+                        "$ref": "#/definitions/listProperties"
+                    }
+                }
+            }
+        }
+    },
+    "type": "object",
+    "required": [
+        "cards"
+    ],
+    "properties": {
+        "cards": {
+            "type": "array",
+            "description": "An array of cards.",
+            "items": {
+                "$ref": "#/definitions/cardData"
+            }
+        }
+    }
+}
