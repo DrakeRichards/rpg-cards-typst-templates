@@ -84,3 +84,39 @@ cards:
             value: 1000 gp
           - name: Weight
             value: 7 lb.
+  - type: item
+    name: "+1 Wand of the War Mage"
+    nameSubtext: Wand, major, uncommon (requires attunement by a spellcaster)
+    bodyText: While you are holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack.
+    image: item.jpg
+    lists:
+      - title: ""
+        items:
+          - name: Properties
+            value: Requires Attunement
+          - name: Cost
+            value: --
+          - name: Weight
+            value: 1 lb.
+  - type: item
+    name: Blue Dragon Scale Mail
+    nameSubtext: Medium Armor, major, very rare (requires attunement)
+    bodyText:
+      Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to lightning damage.
+
+      Additionally, you can focus your senses as an action to magically discern the distance and direction to the closest blue dragon within 30 miles of you. This special action can't be used again until the next dawn.
+    image: item.jpg
+    lists:
+      - title: ""
+        style: plain
+        items:
+          - name: Armor Class
+            value: 14 + DEX (max of +2)
+          - name: Properties
+            value: Requires Attunement
+          - name: Stealth
+            value: The wearer has disadvantage on Stealth (DEX) checks.
+          - name: Cost
+            value: --
+          - name: Weight
+            value: 45 lb.
