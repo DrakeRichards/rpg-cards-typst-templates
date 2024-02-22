@@ -18,13 +18,8 @@
 // Returns:
 //  - `<content>`: The resized content.
 // Example:
-//  #let content1 = lorem(100)
-//  #let content2 = lorem(200)
-//  #let sizedContent1 = sizedContent(content1)
-//  #let sizedContent2 = sizedContent(content2)
-//  #let body = grid(columns: (1fr, 1fr), rows: 100%, column-gutter: 3pt)[#sizedContent1][#sizedContent2]
-//  #body
-#let sizedContent(content, maxHeight: 0pt) = layout(
+//  #grid(columns: (1fr, 1fr), rows: 100%, column-gutter: 3pt)[#sizedContent(lorem(100))][#sizedContent(lorem(200))]
+#let sizedContent(maxHeight: 0pt, content) = layout(
   size => style(
     styles => {
       let contentHeight = measure(block(width: size.width, content), styles).height
@@ -32,7 +27,7 @@
       let targetHeight = maxHeight
       if maxHeight == 0pt {
         targetHeight = blockHeight
-      } 
+      }
       if contentHeight > targetHeight {
         let newSize = getNewRelativeFontSize(contentHeight, targetHeight)
         set text(size: newSize)

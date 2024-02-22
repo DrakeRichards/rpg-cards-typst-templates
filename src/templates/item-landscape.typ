@@ -19,14 +19,16 @@
 
   // Build the document.
   // Include global formatting rules
-  show: templateCommon(bannerColor: color.navy)[
+  show: templateCommon(
+    bannerColor: color.navy,
+  )[
     #cardContent.name
     #grid(
       columns: (auto, 50%),
       rows: (87%),
       column-gutter: 3mm,
-      sizedContent(blocksLeft),
-      blocksRight,
+      blocksLeft,
+      sizedContent(maxHeight: 3.0in, blocksRight), // SizedContent makes this a bit too big, so manually resize down to 3 inches.
     )
   ]
 }
