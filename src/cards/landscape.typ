@@ -7,10 +7,9 @@
 #let data = yaml("/in/data.yaml")
 #for card in data.cards {
   let cardContentBlocks = generateCardContentBlocks(card)
-  if card.type == "character" {
-    generateCharacterCard(cardContentBlocks)
-  }
-  if card.type == "item" {
-    generateItemCard(cardContentBlocks)
-  }
+  let cardOptions = (
+    character: generateCharacterCard(cardContentBlocks),
+    item: generateItemCard(cardContentBlocks),
+  )
+  cardOptions.at(card.type)
 }
