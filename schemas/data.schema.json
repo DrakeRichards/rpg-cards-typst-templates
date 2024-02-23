@@ -52,20 +52,15 @@
         "cardData": {
             "type": "object",
             "required": [
-                "type",
+                "template",
                 "name",
                 "bodyText",
                 "image"
             ],
             "properties": {
-                "type": {
+                "template": {
                     "type": "string",
-                    "description": "The type of card. Can be 'character', 'item', or 'location'.",
-                    "enum": [
-                        "character",
-                        "item",
-                        "location"
-                    ]
+                    "description": "The name of the template file to use."
                 },
                 "name": {
                     "type": "string",

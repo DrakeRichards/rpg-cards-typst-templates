@@ -11,5 +11,5 @@
     character: generateCharacterCard(cardContentBlocks),
     item: generateItemCard(cardContentBlocks),
   )
-  cardOptions.at(card.type)
+  cardOptions.at(card.template)
 }

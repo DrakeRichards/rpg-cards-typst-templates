@@ -1,5 +1,5 @@
 cards:
-  - type: character
+  - template: character
     name: Bob Muscles
     nameSubtext: Fearless Warrior
     bodyText: A fearless warrior who is always ready to fight for his friends. He is a master of hand-to-hand combat and is always ready to take on any challenge. He is a true hero and a great friend.
@@ -25,7 +25,7 @@ cards:
             value: Armor
           - name: ""
             value: Helmet
-  - type: item
+  - template: item
     name: Crystal Ball
     nameSubtext: Magical Item
     bodyText: A magical crystal ball that can see into the future. It is said that whoever possesses the crystal ball will be able to see the future and change their destiny.
@@ -42,7 +42,7 @@ cards:
             value: 1000 gp
           - name: Weight
             value: 7 lb.
-  - type: character
+  - template: character
     name: Alice the Wise
     nameSubtext: Powerful Sorceress
     bodyText: A wise and powerful sorceress who is always ready to help her friends. She is a master of magic and is always ready to take on any challenge. She is a true hero and a great friend.
@@ -67,7 +67,7 @@ cards:
             value: Amulet
           - name: ""
             value: Ring
-  - type: item
+  - template: item
     name: Wand of Fireballs
     nameSubtext: Magical Item
     bodyText: A magical wand that can cast fireballs. It is said that whoever possesses the wand will be able to cast fireballs and change their destiny.
@@ -84,7 +84,7 @@ cards:
             value: 1000 gp
           - name: Weight
             value: 7 lb.
-  - type: item
+  - template: item
     name: "+1 Wand of the War Mage"
     nameSubtext: Wand, major, uncommon (requires attunement by a spellcaster)
     bodyText: While you are holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack.
@@ -98,7 +98,7 @@ cards:
             value: --
           - name: Weight
             value: 1 lb.
-  - type: item
+  - template: item
     name: Blue Dragon Scale Mail
     nameSubtext: Medium Armor, major, very rare (requires attunement)
     bodyText:
