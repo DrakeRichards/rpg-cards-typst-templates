@@ -54,13 +54,18 @@
             "required": [
                 "template",
                 "name",
-                "bodyText",
-                "image"
+                "bodyText"
             ],
             "properties": {
                 "template": {
                     "type": "string",
                     "description": "The name of the template file to use."
+                },
+                "bannerColor": {
+                    "type": "string",
+                    "description": "The color of the top banner. Must be an RGB hex code.",
+                    "default": "#000000",
+                    "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
                 },
                 "name": {
                     "type": "string",

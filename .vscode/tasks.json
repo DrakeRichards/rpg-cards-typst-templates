@@ -9,8 +9,8 @@
       "command": "typst",
       "args": [
         "watch",
-        "${workspaceFolder}/src/cards/landscape.typ",
-        "${workspaceFolder}/out/landscape.pdf",
+        "${workspaceFolder}/src/cards.typ",
+        "${workspaceFolder}/out/cards.pdf",
         "--root",
         "./"
       ],
@@ -38,8 +38,8 @@
       "command": "typst",
       "args": [
         "compile",
-        "${workspaceFolder}/src/cards/character/landscape.typ",
-        "${workspaceFolder}/character-landscape.pdf",
+        "${workspaceFolder}/src/cards.typ",
+        "${workspaceFolder}/out/cards.pdf",
         "--root",
         "./"
       ],

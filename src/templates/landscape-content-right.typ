@@ -2,7 +2,7 @@
 #import "/src/templates/common.typ": template as templateCommon
 #import "/src/modules/resizeContent.typ": sizedContent
 
-#let generateItemCard(cardContent) = {
+#let generate(cardContent) = {
   // Page settings
   set page(width: 6in, height: 4in, margin: 15pt)
 
@@ -20,7 +20,7 @@
   // Build the document.
   // Include global formatting rules
   show: templateCommon(
-    bannerColor: color.navy,
+    bannerColor: cardContent.bannerColor,
   )[
     #cardContent.name
     #grid(

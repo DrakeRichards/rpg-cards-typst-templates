@@ -77,10 +77,19 @@
   }
 }
 
+#let _getBannerColor(data) = {
+  if "bannerColor" not in data.keys() {
+    return color.gray
+  }
+  let bannerColor = rgb(data.bannerColor)
+  return bannerColor
+}
+
 #let generateCardContentBlocks(data) = (
   name: _getNameContent(data),
   nameSubtext: _getNameSubtextContent(data),
   bodyText: _getBodyTextContent(data),
   portrait: _getPortraitContent(data),
   lists: _getListsContent(data),
+  bannerColor: _getBannerColor(data),
 )
