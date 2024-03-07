@@ -1,11 +1,11 @@
 cards:
   - template: landscape-content-left
-    bannerColor: "#85144b"
+    banner_color: "#85144b"
     name: Bob Muscles
-    nameSubtext: Fearless Warrior
-    bodyText: A fearless warrior who is always ready to fight for his friends. He is a master of hand-to-hand combat and is always ready to take on any challenge. He is a true hero and a great friend.
+    name_subtext: Fearless Warrior
+    body_text: A fearless warrior who is always ready to fight for his friends. He is a master of hand-to-hand combat and is always ready to take on any challenge. He is a true hero and a great friend.
     image: character.jpg
-    imageSubtext: Human Warrior
+    image_subtext: Human Warrior
     lists:
       - title: Skills
         style: aligned
@@ -27,12 +27,12 @@ cards:
           - name: ""
             value: Helmet
   - template: landscape-content-right
-    bannerColor: "#001f3f"
+    banner_color: "#001f3f"
     name: Crystal Ball
-    nameSubtext: Magical Item
-    bodyText: A magical crystal ball that can see into the future. It is said that whoever possesses the crystal ball will be able to see the future and change their destiny.
+    name_subtext: Magical Item
+    body_text: A magical crystal ball that can see into the future. It is said that whoever possesses the crystal ball will be able to see the future and change their destiny.
     image: item.jpg
-    imageSubtext: Crystal Ball
+    image_subtext: Crystal Ball
     lists:
       - title: "Properties"
         items:
@@ -45,12 +45,12 @@ cards:
           - name: Weight
             value: 7 lb.
   - template: landscape-content-left
-    bannerColor: "#85144b"
+    banner_color: "#85144b"
     name: Alice the Wise
-    nameSubtext: Powerful Sorceress
-    bodyText: A wise and powerful sorceress who is always ready to help her friends. She is a master of magic and is always ready to take on any challenge. She is a true hero and a great friend.
+    name_subtext: Powerful Sorceress
+    body_text: A wise and powerful sorceress who is always ready to help her friends. She is a master of magic and is always ready to take on any challenge. She is a true hero and a great friend.
     image: character.jpg
-    imageSubtext: Human Sorceress
+    image_subtext: Human Sorceress
     lists:
       - title: Skills
         items:
@@ -71,12 +71,12 @@ cards:
           - name: ""
             value: Ring
   - template: landscape-content-right
-    bannerColor: "#001f3f"
+    banner_color: "#001f3f"
     name: Wand of Fireballs
-    nameSubtext: Magical Item
-    bodyText: A magical wand that can cast fireballs. It is said that whoever possesses the wand will be able to cast fireballs and change their destiny.
+    name_subtext: Magical Item
+    body_text: A magical wand that can cast fireballs. It is said that whoever possesses the wand will be able to cast fireballs and change their destiny.
     image: item.jpg
-    imageSubtext: Wand of Fireballs
+    image_subtext: Wand of Fireballs
     lists:
       - title: "Properties"
         items:
@@ -89,10 +89,10 @@ cards:
           - name: Weight
             value: 7 lb.
   - template: landscape-content-right
-    bannerColor: "#001f3f"
+    banner_color: "#001f3f"
     name: "+1 Wand of the War Mage"
-    nameSubtext: Wand, major, uncommon (requires attunement by a spellcaster)
-    bodyText: While you are holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack.
+    name_subtext: Wand, major, uncommon (requires attunement by a spellcaster)
+    body_text: While you are holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack.
     image: item.jpg
     lists:
       - title: ""
@@ -104,10 +104,10 @@ cards:
           - name: Weight
             value: 1 lb.
   - template: landscape-content-right
-    bannerColor: "#001f3f"
+    banner_color: "#001f3f"
     name: Blue Dragon Scale Mail
-    nameSubtext: Medium Armor, major, very rare (requires attunement)
-    bodyText:
+    name_subtext: Medium Armor, major, very rare (requires attunement)
+    body_text:
       Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to lightning damage.
 
       Additionally, you can focus your senses as an action to magically discern the distance and direction to the closest blue dragon within 30 miles of you. This special action can't be used again until the next dawn.

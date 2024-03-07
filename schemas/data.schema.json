@@ -3,7 +3,7 @@
     "title": "Typst RPG Card Data Schema",
     "description": "A schema to valdidate data.yaml files to be exported to the Typst RPG card template.",
     "definitions": {
-        "listProperties": {
+        "list_properties": {
             "type": "object",
             "required": [
                 "title",
@@ -49,19 +49,19 @@
                 }
             }
         },
-        "cardData": {
+        "card_data": {
             "type": "object",
             "required": [
                 "template",
                 "name",
-                "bodyText"
+                "body_text"
             ],
             "properties": {
                 "template": {
                     "type": "string",
                     "description": "The name of the template file to use."
                 },
-                "bannerColor": {
+                "banner_color": {
                     "type": "string",
                     "description": "The color of the top banner. Must be an RGB hex code.",
                     "default": "#000000",
@@ -71,11 +71,11 @@
                     "type": "string",
                     "description": "The name of the subject which will appear on the top banner."
                 },
-                "nameSubtext": {
+                "name_subtext": {
                     "type": "string",
                     "description": "The text that will appear beneath the name. Example: Gender/Race/Class from D&D 5e, or perhaps their title or role."
                 },
-                "bodyText": {
+                "body_text": {
                     "type": "string",
                     "description": "The body text that will fill the bulk of the card. This is where you can put the character's backstory, personality, and other details."
                 },
@@ -84,7 +84,7 @@
                     "description": "The URL or filename of the image to be used as the card's portrait. Can be a local file path or a web URL.",
                     "default": "character.jpg"
                 },
-                "imageSubtext": {
+                "image_subtext": {
                     "type": "string",
                     "description": "The subtext that will appear beneath the image. This is where you can put the character's name, title, or other details."
                 },
@@ -92,7 +92,7 @@
                     "type": "array",
                     "description": "An array of lists.",
                     "items": {
-                        "$ref": "#/definitions/listProperties"
+                        "$ref": "#/definitions/list_properties"
                     }
                 }
             }
@@ -107,7 +107,7 @@
             "type": "array",
             "description": "An array of cards.",
             "items": {
-                "$ref": "#/definitions/cardData"
+                "$ref": "#/definitions/card_data"
             }
         }
     }

@@ -10,20 +10,20 @@
 }
 
 #let _getNameSubtextContent(data) = {
-  if "nameSubtext" not in data.keys() {
+  if "name_subtext" not in data.keys() {
     return ""
   }
   set text(style: "italic")
-  data.nameSubtext
+  data.name_subtext
 }
 
 #let _getBodyTextContent(data) = {
-  if "bodyText" not in data.keys() {
+  if "body_text" not in data.keys() {
     return ""
   }
   set par(justify: true)
   linebreak()
-  data.bodyText
+  data.body_text
 }
 
 #let _getImagePath(fileName) = {
@@ -42,8 +42,8 @@
   let imagePath = _getImagePath(data.image)
 
   // Set a blank caption if imageSubtext is missing.
-  let imageSubtext = if "imageSubtext" in data.keys() {
-    data.imageSubtext
+  let imageSubtext = if "image_subtext" in data.keys() {
+    data.image_subtext
   } else {
     ""
   }
@@ -78,10 +78,10 @@
 }
 
 #let _getBannerColor(data) = {
-  if "bannerColor" not in data.keys() {
+  if "banner_color" not in data.keys() {
     return color.gray
   }
-  let bannerColor = rgb(data.bannerColor)
+  let bannerColor = rgb(data.banner_color)
   return bannerColor
 }
 
