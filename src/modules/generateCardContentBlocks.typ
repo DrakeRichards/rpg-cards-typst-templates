@@ -56,7 +56,7 @@
   }
 
   // Return the figure
-  figure(caption: imageSubtext, image(imagePath, width: 100%, fit: "contain"))
+  figure(caption: imageSubtext, validation.maybe-image(imagePath, width: 100%, fit: "contain"))
 }
 
 #let _getListsContent(data) = {
