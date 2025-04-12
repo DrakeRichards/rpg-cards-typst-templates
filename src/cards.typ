@@ -2,7 +2,29 @@
 #import "/src/templates/common.typ": template as templateCommon
 #import "/src/modules/generateCardContentBlocks.typ": generateCardContentBlocks
 
-#let data = yaml("/in/data.yaml")
+#let data = {
+  let inputFile = "../examples/data.yaml"
+  if "data" in sys.inputs.keys() {
+    inputFile = sys.inputs.at("data")
+  }
+  let fileExtension = inputFile.split(".").last()
+  if fileExtension == "json" {
+    json(inputFile)
+  }
+  if fileExtension == "yaml" {
+    yaml(inputFile)
+  }
+  if fileExtension == "yml" {
+    yaml(inputFile)
+  }
+  if fileExtension == "toml" {
+    toml(inputFile)
+  }
+  if fileExtension == "xml" {
+    xml(inputFile)
+  }
+}
+
 #for card in data.cards {
   let cardContentBlocks = generateCardContentBlocks(card)
   // Import the template defined in the 'template' field.
