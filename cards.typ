@@ -1,9 +1,9 @@
 // Imports
-#import "/src/templates/common.typ": template as templateCommon
-#import "/src/modules/generateCardContentBlocks.typ": generateCardContentBlocks
+#import "templates/common.typ": template as templateCommon
+#import "modules/generateCardContentBlocks.typ": generateCardContentBlocks
 
 #let data = {
-  let inputFile = "../examples/data.yaml"
+  let inputFile = "examples/data.yaml"
   if "data" in sys.inputs.keys() {
     inputFile = sys.inputs.at("data")
   }
@@ -29,7 +29,7 @@
   let cardContentBlocks = generateCardContentBlocks(card)
   // Import the template defined in the 'template' field.
   // There's no way to check whether the file exists, so we assume it does.
-  let importPath = "/src/templates/" + card.template + ".typ"
+  let importPath = "templates/" + card.template + ".typ"
   import importPath as template
   template.generate(cardContentBlocks)
 }

@@ -1,6 +1,6 @@
 // Imports
-#import "/src/templates/common.typ": template as templateCommon
-#import "/src/modules/resizeContent.typ": sizedContent
+#import "/templates/common.typ": template as templateCommon
+#import "/modules/resizeContent.typ": sizedContent
 
 #let generate(cardContent) = {
   // Page settings
@@ -8,27 +8,24 @@
 
   // Blocks for each half of the card
   let blocksLeft = {
-    cardContent.portrait
-  }
-
-  let blocksRight = {
     cardContent.nameSubtext
     cardContent.bodyText
     cardContent.lists
   }
 
+  let blocksRight = {
+    cardContent.portrait
+  }
+
   // Build the document.
   // Include global formatting rules
-  show: templateCommon(
-    bannerColor: cardContent.bannerColor,
-  )[
+  show: templateCommon(bannerColor: cardContent.bannerColor)[
     #cardContent.name
     #grid(
       columns: (auto, 50%),
-      rows: (87%),
       column-gutter: 3mm,
-      blocksLeft,
-      sizedContent(maxHeight: 3.0in, blocksRight), // SizedContent makes this a bit too big, so manually resize down to 3 inches.
+      grid.cell(sizedContent(blocksLeft)),
+      grid.cell(blocksRight),
     )
   ]
 }

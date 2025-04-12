@@ -15,7 +15,9 @@
   // Level 1 headings have a gray highlight.
   show heading.where(level: 1): it => [
     #set text(size: 1.5em, fill: white)
-    #box(width: 100%, inset: 5pt, fill: bannerColor, it)
+    #pad(rest: 0mm)[
+      #box(width: 100%, inset: 5pt, fill: bannerColor, it)
+    ]
   ]
 
   // Level 2 headings are centered

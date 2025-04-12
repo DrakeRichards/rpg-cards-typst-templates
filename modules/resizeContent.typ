@@ -19,22 +19,18 @@
 //  - `<content>`: The resized content.
 // Example:
 //  #grid(columns: (1fr, 1fr), rows: 100%, column-gutter: 3pt)[#sizedContent(lorem(100))][#sizedContent(lorem(200))]
-#let sizedContent(maxHeight: 0pt, content) = layout(
-  size => style(
-    styles => {
-      let contentHeight = measure(block(width: size.width, content), styles).height
-      let blockHeight = size.height
-      let targetHeight = maxHeight
-      if maxHeight == 0pt {
-        targetHeight = blockHeight
-      }
-      if contentHeight > targetHeight {
-        let newSize = getNewRelativeFontSize(contentHeight, targetHeight)
-        set text(size: newSize)
-        content
-      } else {
-        content
-      }
-    },
-  ),
-)
+#let sizedContent(maxHeight: 0pt, content) = layout(size => {
+  let contentHeight = measure(block(width: size.width, content)).height
+  let blockHeight = size.height
+  let targetHeight = maxHeight
+  if maxHeight == 0pt {
+    targetHeight = blockHeight
+  }
+  if contentHeight > targetHeight {
+    let newSize = getNewRelativeFontSize(contentHeight, targetHeight)
+    set text(size: newSize)
+    content
+  } else {
+    content
+  }
+})

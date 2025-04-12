@@ -1,6 +1,6 @@
 // Imports
-#import "/src/modules/validation.typ"
-#import "/src/modules/styledLists.typ": styledList
+#import "validation.typ"
+#import "styledLists.typ": styledList
 
 #let _getNameContent(data) = {
   if "name" not in data.keys() {
@@ -30,7 +30,7 @@
   if validation.isUrl(fileName) {
     return fileName
   } else {
-    return "/in/" + fileName
+    return "../" + fileName
   }
 }
 
@@ -56,14 +56,14 @@
   }
 
   // Return the figure
-  figure(caption: imageSubtext, validation.maybe-image(imagePath, width: 100%, fit: "contain"))
+  figure(caption: imageSubtext, image(imagePath, width: 100%, fit: "contain"))
 }
 
 #let _getListsContent(data) = {
   if "lists" not in data.keys() {
     return
   }
-  if type(data.lists) != "array" {
+  if type(data.lists) != array {
     return
   }
   for list in data.lists {

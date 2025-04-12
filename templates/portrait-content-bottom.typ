@@ -1,6 +1,6 @@
 // Imports
-#import "/src/templates/common.typ": template as templateCommon
-#import "/src/modules/resizeContent.typ": sizedContent
+#import "/templates/common.typ": template as templateCommon
+#import "/modules/resizeContent.typ": sizedContent
 
 #let generate(cardContent) = {
   // Page settings
