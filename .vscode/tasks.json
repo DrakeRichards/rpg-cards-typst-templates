@@ -4,15 +4,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "watch landscape",
+      "label": "watch",
       "type": "shell",
       "command": "typst",
       "args": [
         "watch",
-        "${workspaceFolder}/src/cards.typ",
-        "${workspaceFolder}/out/cards.pdf",
-        "--root",
-        "./"
+        "${workspaceFolder}/cards.typ",
+        "--input",
+        "data=data.yaml"
       ],
       "problemMatcher": [],
       "group": {
@@ -38,10 +37,9 @@
       "command": "typst",
       "args": [
         "compile",
-        "${workspaceFolder}/src/cards.typ",
-        "${workspaceFolder}/out/cards.pdf",
-        "--root",
-        "./"
+        "${workspaceFolder}/cards.typ",
+        "--input",
+        "data=data.yaml"
       ],
       "problemMatcher": [],
       "group": {

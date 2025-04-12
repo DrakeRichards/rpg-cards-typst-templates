@@ -2,6 +2,7 @@
 in/*
 *.pdf
 !in/.placeholder
+data.yaml
 
 # System-generated files
 .DS_Store

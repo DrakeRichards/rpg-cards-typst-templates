@@ -22,12 +22,12 @@ To generate the examples, run `typst compile cards.typ`
 
 ### Create Your Own Cards
 
-1. Create a new file named `data.yaml`.
+1. Create a new file named `data.yaml` in the root directory of this project.
 2. Use the JSON schema `schemas/data.schema.json` to help you create the `yaml` file. If you named the file `data.yaml`, and you are using Visual Studio Code, the schema will automatically be used to validate your file.
 
 ### Generating
 
-Run `typst compile cards.typ --data data.yaml` to generate the cards based on the `yaml` file. This will generate a PDF of all cards in the directory you run the command in.
+Run `typst compile cards.typ --input data=data.yaml` to generate the cards based on the `data.yaml` file. This will generate a PDF of all cards in the directory you run the command in.
 
 ## Customization
 
