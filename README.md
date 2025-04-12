@@ -5,6 +5,13 @@ System-agnostic Typst templates for various RPG cards. Currently has templates f
 - Landscape 4x6 cards
 - Portrait 4x6 cards
 
+## Examples
+
+To generate the examples, run `typst compile cards.typ`
+
+![Example 1](examples/example-1.png)
+![Example 6](examples/example-6.png)
+
 ## Usage
 
 ### Installation
@@ -12,10 +19,6 @@ System-agnostic Typst templates for various RPG cards. Currently has templates f
 1. Install Typst.
 1. Clone this repository.
 1. Navigate to the repository's root directory.
-
-### Examples
-
-To generate the examples, run `typst compile cards.typ`
 
 ### Create Your Own Cards
 
