@@ -1,0 +1,20 @@
+{
+    "name": "Typst",
+    "image": "ghcr.io/typst/typst:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "myriad-dreamin.tinymist",
+                "CalebFiggers.typst-companion",
+                "tomoki1207.pdf",
+                "mohsen1.prettify-json",
+                "redhat.vscode-yaml",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-git:0": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-openssh:0": {}
+    }
+}
