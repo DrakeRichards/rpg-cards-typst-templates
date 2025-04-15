@@ -1,0 +1,100 @@
+{
+    "$ref": "#/$defs/CardCollection",
+    "$defs": {
+        "ListItem": {
+            "type": "object",
+            "title": "ListItem",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the item. Can be blank if you don't want the item labelled."
+                },
+                "value": {
+                    "type": "string",
+                    "description": "The value of the item."
+                }
+            },
+            "additionalProperties": false
+        },
+        "ListProperties": {
+            "type": "object",
+            "title": "ListProperties",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "The title of the bulleted list. Can be left blank."
+                },
+                "style": {
+                    "type": "string",
+                    "description": "The style of the list. Defaults to 'plain'.",
+                    "default": "plain"
+                },
+                "items": {
+                    "type": "array",
+                    "description": "The list of items that will appear on the card. This is where you can put the character's stats, abilities, or other details.",
+                    "items": {
+                        "$ref": "#/$defs/ListItem"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "CardData": {
+            "type": "object",
+            "title": "CardData",
+            "properties": {
+                "template": {
+                    "type": "string",
+                    "description": "The name of the template file to use."
+                },
+                "banner_color": {
+                    "type": "string",
+                    "description": "The color of the top banner. Must be an RGB hex code.",
+                    "default": "#000000"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the subject which will appear on the top banner."
+                },
+                "name_subtext": {
+                    "type": "string",
+                    "description": "The text that will appear beneath the name."
+                },
+                "body_text": {
+                    "type": "string",
+                    "description": "The body text that will fill the bulk of the card."
+                },
+                "image": {
+                    "type": "string",
+                    "description": "The URL or filename of the image to be used as the card's portrait."
+                },
+                "image_subtext": {
+                    "type": "string",
+                    "description": "The subtext that will appear beneath the image."
+                },
+                "lists": {
+                    "type": "array",
+                    "description": "An array of lists.",
+                    "items": {
+                        "$ref": "#/$defs/ListProperties"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "CardCollection": {
+            "type": "object",
+            "title": "CardCollection",
+            "properties": {
+                "cards": {
+                    "type": "array",
+                    "description": "An array of cards.",
+                    "items": {
+                        "$ref": "#/$defs/CardData"
+                    }
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

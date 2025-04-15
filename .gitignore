@@ -6,3 +6,7 @@ data.yaml
 
 # System-generated files
 .DS_Store
+
+# Python venv and cache
+__pycache__/
+**/venv

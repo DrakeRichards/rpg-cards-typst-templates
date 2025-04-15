@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=data.schema.json
+cards:
+  - template: landscape-content-left
+    banner_color: "#85144b"
+    name: Bob Muscles
+    name_subtext: Fearless Warrior
+    body_text: A fearless warrior who is always ready to fight for his friends. He is a master of hand-to-hand combat and is always ready to take on any challenge. He is a true hero and a great friend.
+    image: examples/character.jpg
+    image_subtext: Human Warrior
+    lists:
+      - title: Skills
+        style: aligned
+        items:
+          - name: Hand-to-Hand Combat
+            value: "+2"
+          - name: Fearless
+            value: "+3"
+          - name: Strength
+            value: "+4"
+      - title: Equipment
+        items:
+          - name: ""
+            value: Sword
+          - name: ""
+            value: Shield
+          - name: ""
+            value: Armor
+          - name: ""
+            value: Helmet
+  - template: landscape-content-right
+    banner_color: "#001f3f"
+    name: Crystal Ball
+    name_subtext: Magical Item
+    body_text: A magical crystal ball that can see into the future. It is said that whoever possesses the crystal ball will be able to see the future and change their destiny.
+    image: examples/item.jpg
+    image_subtext: Crystal Ball
+    lists:
+      - title: "Properties"
+        items:
+          - name: ""
+            value: "The crystal ball has 3 charges. You can use an action to expend 1 charge from the crystal ball and choose a creature known to you as the target of this scrying. The target must make a Wisdom saving throw, which is modified by how well you know the target and the sort of physical connection you have to it. If a target knows you're casting this spell, it can fail the saving throw voluntarily if it wants to be observed."
+      - title: ""
+        items:
+          - name: Value
+            value: 1000 gp
+          - name: Weight
+            value: 7 lb.
+  - template: landscape-content-left
+    banner_color: "#85144b"
+    name: Alice the Wise
+    name_subtext: Powerful Sorceress
+    body_text: A wise and powerful sorceress who is always ready to help her friends. She is a master of magic and is always ready to take on any challenge. She is a true hero and a great friend.
+    image: examples/character.jpg
+    image_subtext: Human Sorceress
+    lists:
+      - title: Skills
+        items:
+          - name: Magic
+            value: "+5"
+          - name: Wisdom
+            value: "+4"
+          - name: Intelligence
+            value: "+3"
+      - title: Equipment
+        items:
+          - name: ""
+            value: Staff
+          - name: ""
+            value: Robe
+          - name: ""
+            value: Amulet
+          - name: ""
+            value: Ring
+  - template: landscape-content-right
+    banner_color: "#001f3f"
+    name: Wand of Fireballs
+    name_subtext: Magical Item
+    body_text: A magical wand that can cast fireballs. It is said that whoever possesses the wand will be able to cast fireballs and change their destiny.
+    image: examples/item.jpg
+    image_subtext: Wand of Fireballs
+    lists:
+      - title: "Properties"
+        items:
+          - name: ""
+            value: "The wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the fireball spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend."
+      - title: ""
+        items:
+          - name: Value
+            value: 1000 gp
+          - name: Weight
+            value: 7 lb.
+  - template: landscape-content-right
+    banner_color: "#001f3f"
+    name: "+1 Wand of the War Mage"
+    name_subtext: Wand, major, uncommon (requires attunement by a spellcaster)
+    body_text: While you are holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack.
+    image: examples/item.jpg
+    lists:
+      - title: ""
+        items:
+          - name: Properties
+            value: Requires Attunement
+          - name: Cost
+            value: --
+          - name: Weight
+            value: 1 lb.
+  - template: landscape-content-right
+    banner_color: "#001f3f"
+    name: Blue Dragon Scale Mail
+    name_subtext: Medium Armor, major, very rare (requires attunement)
+    body_text:
+      Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to lightning damage.
+
+      Additionally, you can focus your senses as an action to magically discern the distance and direction to the closest blue dragon within 30 miles of you. This special action can't be used again until the next dawn.
+    image: examples/item.jpg
+    lists:
+      - title: ""
+        style: plain
+        items:
+          - name: Armor Class
+            value: 14 + DEX (max of +2)
+          - name: Properties
+            value: Requires Attunement
+          - name: Stealth
+            value: The wearer has disadvantage on Stealth (DEX) checks.
+          - name: Cost
+            value: --
+          - name: Weight
+            value: 45 lb.
